@@ -12,19 +12,17 @@ public class App {
     private int questionsTaken = 0;
     private int correctAnswers = 0;
 
-
-    public void game() {
-
+    public App(List<Question> questions) {
+        this.questions = questions;
         askQuestions();
-
     }
+
 
     private void askQuestions() {
 
         for (Question question : questions) {
 
-            System.out.println(question.toString());
-            System.out.println("enter your option: ");
+            System.out.print(question.prompt() + "\nenter your option: ");
             Scanner scanner = new Scanner(System.in);
 
             String usrInput = scanner.nextLine();

@@ -5,12 +5,11 @@ import java.util.List;
 
 public class LoadQuestions {
 
-    private ReadCsvQuestions readCsvQuestions;
-    private List<List<String>> csvQuestionList;
+//    private ReadCsvQuestions readCsvQuestions;
+    private final List<List<String>> csvQuestionList;
 
-    public LoadQuestions(ReadCsvQuestions readCsvQuestions) {
-        this.readCsvQuestions = readCsvQuestions;
-        this.csvQuestionList = readCsvQuestions.fileReader();
+    public LoadQuestions(List<List<String>> readCsvQuestions) {
+        this.csvQuestionList = readCsvQuestions;
     }
 
     public List<Question> load() {

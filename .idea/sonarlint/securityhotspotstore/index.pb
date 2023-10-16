@@ -14,5 +14,3 @@ f
 6src/main/java/com/karlson/questions/LoadQuestions.java,7\4\74e59c94271796ac1ba7d885220dad35183c675a
 R
 "src/main/java/com/karlson/App.java,6\d\6d695f1b077df0542f955a8f16ac36299ce7735b
-i
-9src/main/java/com/karlson/questions/ReadCsvQuestions.java,e\f\ef1db5ae45ae3feec073f1575ee3c5ae72c586cd

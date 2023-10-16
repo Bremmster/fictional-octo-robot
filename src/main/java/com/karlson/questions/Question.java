@@ -55,6 +55,19 @@ public class Question {
                 '}';
     }
 
+    public String prompt() {
+        // method won't add Option C + D if they are empty
+
+        String formattedQuestion = quiz + "\n1: " + optionA + "\n2: " + optionB;
+        if (!optionC.isEmpty()) {
+            formattedQuestion = formattedQuestion.concat("\n3: " + optionC);
+        }
+        if (!optionD.isEmpty()) {
+            formattedQuestion = formattedQuestion.concat("\n4: " + optionD);
+        }
+        return formattedQuestion;
+    }
+
     public static class QuestionBuilder {
 
         // Requred parameters
