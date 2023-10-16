@@ -8,12 +8,8 @@ import com.karlson.questions.ReadCsvQuestions;
  */
 public class Main {
     public static void main(String[] args) {
-        // Read the CSV file and in preparation of injection a List<Question> to app
-        LoadQuestions questions = new LoadQuestions(new ReadCsvQuestions().fileReader());
 
-        new App(questions.load()); // inject the question list
-
+        // Read the CSV file make List<Question> and inject to app
+        new App(new LoadQuestions().load(new ReadCsvQuestions().fileReader()));
     }
-
-
 }

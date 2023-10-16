@@ -32,9 +32,4 @@ public class UserInputManager {
         }
         return input;
     }
-
-    public static String getString() {
-        System.out.print("Set name: ");
-        return scanner.nextLine();
-    }
 }

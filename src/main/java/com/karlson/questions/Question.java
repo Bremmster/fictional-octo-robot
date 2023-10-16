@@ -2,7 +2,7 @@ package com.karlson.questions;
 
 public class Question {
 
-    // Requred parameters
+    // Required parameters
     private final String quiz;
     private final String optionA;
     private final String optionB;
@@ -19,50 +19,18 @@ public class Question {
         this.optionD = builder.optionD;
     }
 
-    public String getQuiz() {
-        return quiz;
-    }
-
-    public String getOptionA() {
-        return optionA;
-    }
-
-    public String getOptionB() {
-        return optionB;
-    }
-
     public int getAnswer() {
         return answer;
-    }
-
-    public String getOptionC() {
-        return optionC;
-    }
-
-    public String getOptionD() {
-        return optionD;
-    }
-
-    @Override
-    public String toString() {
-        return "Question{" +
-                "quiz='" + quiz + '\'' +
-                ", answer='" + answer + '\'' +
-                ", optionA='" + optionA + '\'' +
-                ", optionB='" + optionB + '\'' +
-                ", optionC='" + optionC + '\'' +
-                ", optionD='" + optionD + '\'' +
-                '}';
     }
 
     public String prompt() {
         // method won't add Option C + D if they are empty
 
         String formattedQuestion = quiz + "\n1: " + optionA + "\n2: " + optionB;
-        if (!optionC.isEmpty()) {
+        if (optionC != null) {
             formattedQuestion = formattedQuestion.concat("\n3: " + optionC);
         }
-        if (!optionD.isEmpty()) {
+        if (optionD != null) {
             formattedQuestion = formattedQuestion.concat("\n4: " + optionD);
         }
         return formattedQuestion;
@@ -70,7 +38,7 @@ public class Question {
 
     public static class QuestionBuilder {
 
-        // Requred parameters
+        // Required parameters
         private String quiz;
         private String optionA;
         private String optionB;

@@ -1,5 +1,6 @@
-Fråga,1,Alternaiv A,Alternaiv B,Alternaiv C,Alternaiv D
-Första frågan,1,Ja,Nej,Nej,Nej
-Andra frågan,2,Nej,Ja,Nej,Nej
-Tredje frågan,3,Nej,Nej,Ja,Nej
-Fjärde frågan,4,Nej,Nej,Nej,Ja
+Question?,1,Alternative A,Alternative B,Alternative C,Alternative D
+First question which is true?,1,true,false,false,false
+Second question which is true?,2,false,true,false,false
+Third question which is true?,3,false,false,true,false
+Fourth question which is true?,4,false,false,false,true
+Is this a question with two options?,1,true,false

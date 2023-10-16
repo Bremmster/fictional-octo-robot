@@ -1,5 +1,8 @@
 package com.karlson.questions;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -12,8 +15,8 @@ import java.util.List;
  */
 public class ReadCsvQuestions {
 
-    private final String fileToRead = "questionnaire/test.csv";
-// todo add contructor that inputs file location
+    private static final String FILE_TO_READ = "questionnaire/test.csv";
+    private static final Logger LOGGER = LogManager.getLogger(ReadCsvQuestions.class);
 
     /**
      * @return list of CSV formatted strings
@@ -21,14 +24,14 @@ public class ReadCsvQuestions {
 
     public List<List<String>> fileReader() {
         List<List<String>> records = new ArrayList<>();
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileToRead))) {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(FILE_TO_READ))) {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 String[] values = line.split(",");
                 records.add(Arrays.asList(values));
             }
         } catch (IOException e) {
-            System.out.println("Error reading CSV file " + e);
+            LOGGER.error("Error reading from CSV file");
         }
         return records;
     }
