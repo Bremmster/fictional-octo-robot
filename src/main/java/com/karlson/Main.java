@@ -2,10 +2,6 @@ package com.karlson;
 
 import com.karlson.questions.LoadQuestions;
 import com.karlson.questions.ReadCsvQuestions;
-import com.karlson.questions.Question;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author Kristian Karlson

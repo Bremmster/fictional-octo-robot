@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class ReadCsvQuestions {
 
-    private final String fileToRead = "questions/test.csv";
+    private final String fileToRead = "questionnaire/test.csv";
 // todo add contructor that inputs file location
 
     /**
@@ -28,7 +28,7 @@ public class ReadCsvQuestions {
                 records.add(Arrays.asList(values));
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("Error reading CSV file " + e);
         }
         return records;
     }

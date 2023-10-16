@@ -3,12 +3,12 @@ package com.karlson.questions;
 public class Question {
 
     // Requred parameters
-    private String quiz;
-    private String optionA;
-    private String optionB;
-    private String answer;
-    private String optionC;
-    private String optionD;
+    private final String quiz;
+    private final String optionA;
+    private final String optionB;
+    private final int answer;
+    private final String optionC;
+    private final String optionD;
 
     public Question(QuestionBuilder builder) {
         this.quiz = builder.quiz;
@@ -31,7 +31,7 @@ public class Question {
         return optionB;
     }
 
-    public String getAnswer() {
+    public int getAnswer() {
         return answer;
     }
 
@@ -74,7 +74,7 @@ public class Question {
         private String quiz;
         private String optionA;
         private String optionB;
-        private String answer;
+        private int answer;
         //  Optional parameters
         private String optionC;
         private String optionD;
@@ -106,7 +106,7 @@ public class Question {
         }
 
         public QuestionBuilder setAnswer(String answer) {
-            this.answer = answer;
+            this.answer = Integer.parseInt(answer);
             return this;
         }
 

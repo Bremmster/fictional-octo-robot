@@ -1,37 +1,41 @@
 package com.karlson;
 
 import com.karlson.questions.Question;
+import com.karlson.scanner.UserInputManager;
 
 import java.util.List;
-import java.util.Scanner;
 
 public class App {
 
-    private List<Question> questions;
-
+    private final List<Question> questions;
     private int questionsTaken = 0;
     private int correctAnswers = 0;
 
     public App(List<Question> questions) {
         this.questions = questions;
         askQuestions();
+        printScore();
     }
-
 
     private void askQuestions() {
 
-        for (Question question : questions) {
+        while (questionsTaken < questions.size()) {
 
-            System.out.print(question.prompt() + "\nenter your option: ");
-            Scanner scanner = new Scanner(System.in);
+            System.out.print(questions.get(questionsTaken).prompt() + "\nenter your option: ");
 
-            String usrInput = scanner.nextLine();
+            int usrInput = UserInputManager.getLimitedInt(1, 4);
 
-            if (usrInput.equalsIgnoreCase(question.getAnswer())) {
-                correctAnswers++;
+            if (usrInput == questions.get(questionsTaken).getAnswer()) {
+                this.correctAnswers++;
             }
+            questionsTaken++;
         }
     }
 
-
+    private void printScore() {
+        double percentage = (double) (correctAnswers * 100) / questionsTaken;
+        System.out.println("Questions taken: " + questionsTaken + "\nCorrect answers: " + correctAnswers + "\nPercentage: " + percentage);
+    }
 }
+
+

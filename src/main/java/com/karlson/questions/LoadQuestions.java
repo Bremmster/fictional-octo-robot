@@ -5,7 +5,6 @@ import java.util.List;
 
 public class LoadQuestions {
 
-//    private ReadCsvQuestions readCsvQuestions;
     private final List<List<String>> csvQuestionList;
 
     public LoadQuestions(List<List<String>> readCsvQuestions) {
