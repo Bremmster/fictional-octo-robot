@@ -1,5 +1,5 @@
-Fråga,Alternaiv A,Alternaiv B, Alternaiv C, Alternaiv D,Rätt svar
-Första frågan,Ja,Nej,Nej,Nej,1
-Andra frågan,Nej,Ja,Nej,Nej,2
-Tredje frågan,Nej,Nej,Ja,Nej,3
-Fjärde frågan,Nej,Nej,Nej,Ja,4
+Fråga,rätt svar,Alternaiv A,Alternaiv B,Alternaiv C,Alternaiv D
+Första frågan,1,Ja,Nej,Nej,Nej
+Andra frågan,2,Nej,Ja,Nej,Nej
+Tredje frågan,3,Nej,Nej,Ja,Nej
+Fjärde frågan,4,Nej,Nej,Nej,Ja

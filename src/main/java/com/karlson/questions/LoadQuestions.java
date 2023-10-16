@@ -1,4 +1,4 @@
-package com.karlson;
+package com.karlson.questions;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -12,10 +12,16 @@ import java.util.List;
  */
 public class LoadQuestions {
 
-    // todo BufferedReader
-    public List<List<String>> readLine() {
+    private final String fileToRead = "questions/test.csv";
+
+    /**
+     *
+     * @return list of CSV formatted strings
+     */
+
+    public List<List<String>> fileReader() {
         List<List<String>> records = new ArrayList<>();
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("questions/test.csv"))) {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileToRead))) {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 String[] values = line.split(",");
@@ -26,6 +32,5 @@ public class LoadQuestions {
         }
         return records;
     }
-
 }
 
