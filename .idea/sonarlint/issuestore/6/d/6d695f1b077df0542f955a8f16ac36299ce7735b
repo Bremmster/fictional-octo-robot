@@ -1,5 +1,3 @@
 
-L	java:S106"+Replace this use of System.out by a logger.(÷¶ºşÿÿÿÿ8¦ñğÆ³1
-L	java:S106"+Replace this use of System.out by a logger.(ÆË¼Ñûÿÿÿÿ8§ñğÆ³1
-O
-java:S1068"2Remove this unused "questionsTaken" private field.(©õñº8ªñğÆ³1
+G	java:S106"+Replace this use of System.out by a logger.(÷Ì¡¿8«³ÂĞ³1
+E	java:S106%"+Replace this use of System.out by a logger.(ä¶8„óÑ³1
