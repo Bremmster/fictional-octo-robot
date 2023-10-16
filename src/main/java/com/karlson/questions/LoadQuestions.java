@@ -1,36 +1,35 @@
 package com.karlson.questions;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-/**
- * @author Kristian Karlson
- */
 public class LoadQuestions {
 
-    private final String fileToRead = "questions/test.csv";
+    private ReadCsvQuestions readCsvQuestions;
+    private List<List<String>> csvQuestionList;
 
-    /**
-     *
-     * @return list of CSV formatted strings
-     */
+    public LoadQuestions(ReadCsvQuestions readCsvQuestions) {
+        this.readCsvQuestions = readCsvQuestions;
+        this.csvQuestionList = readCsvQuestions.fileReader();
+    }
 
-    public List<List<String>> fileReader() {
-        List<List<String>> records = new ArrayList<>();
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileToRead))) {
-            String line;
-            while ((line = bufferedReader.readLine()) != null) {
-                String[] values = line.split(",");
-                records.add(Arrays.asList(values));
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+    public List<Question> load() {
+        List<Question> questions = new ArrayList<>();
+        return makeQuestionObj(questions);
+    }
+
+    private List<Question> makeQuestionObj(List<Question> questions) {
+        for (List<String> csvString : csvQuestionList) {
+            Question question = new Question.QuestionBuilder()
+                    .setQuiz(csvString.get(0))
+                    .setAnswer(csvString.get(1))
+                    .setOptionA(csvString.get(2))
+                    .setOptionB(csvString.get(3))
+                    .setOptionC(csvString.get(4))
+                    .setOptionD(csvString.get(5))
+                    .build();
+            questions.add(question);
         }
-        return records;
+        return questions;
     }
 }
-
