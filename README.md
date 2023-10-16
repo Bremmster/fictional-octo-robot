@@ -8,10 +8,11 @@ Small application for quizzes. Can handle questions with one correct option and 
 Runs on Java 21
 
 ## Usage
-replace questionnaire/test.csv with you questions
+Add you questions to questionnaire/test.csv
 
 csv is a comma separated file
-example question: The sky is?,3,Orange,Green,Blue,Pink
+Example question:  The sky is?,3,Orange,Green,Blue,Pink 
+Correct answer 3 is blue.
 
 | String      | int (1-4)      | String | String | String            | String            |
 |-------------|----------------|--------|--------|-------------------|-------------------|
