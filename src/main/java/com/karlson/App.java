@@ -15,7 +15,9 @@ public class App {
         this.questions = questions;
         askQuestions();
         printScore();
+        printBadAnswers();
     }
+
 
     private void askQuestions() {
 
@@ -27,7 +29,8 @@ public class App {
 
             if (usrInput == questions.get(questionsTaken).getAnswer()) {
                 this.correctAnswers++;
-            }
+                questions.get(questionsTaken).setCorrectAnswer(true);
+            } else System.out.println("wrong answer");
             questionsTaken++;
         }
     }
@@ -36,6 +39,14 @@ public class App {
         double percentage = (double) (correctAnswers * 100) / questionsTaken;
         System.out.println("Questions taken: " + questionsTaken + "\nCorrect answers: " + correctAnswers + "\nPercentage: " + percentage);
     }
-}
 
+    private void printBadAnswers() {
+        System.out.println("questions you need to practice more:");
+        for (Question question : questions) {
+            if (!question.wasCorrectAnswer()) {
+                System.out.println(" " + question.getQuiz());
+            }
+        }
+    }
+}
 
