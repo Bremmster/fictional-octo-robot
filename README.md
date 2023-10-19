@@ -11,9 +11,9 @@ Runs on Java 21
 Add your questions to questionnaire/test.csv
 
 Csv is a comma separated file
-Example question: The sky is?,3,Orange,Green,Blue,Pink 
-Correct answer 3 is blue.
-It's possible to comment on rows, use # as first char.
+Example question: The sky is?,3,Orange,Green,Blue,Pink  
+Correct answer 3 is blue.  
+It's possible to comment out rows, use # as first char.
 
 | String                     | int (1-4)      | String | String | String            | String            |
 |----------------------------|----------------|--------|--------|-------------------|-------------------|
