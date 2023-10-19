@@ -20,7 +20,7 @@ public class App {
     private void askQuestions() {
 
         while (questionsTaken < questions.size()) {
-
+//          questionsTaken is the counter in loop, class variable to enable tracking of % score
             System.out.print(questions.get(questionsTaken).prompt() + "\nenter your option: ");
 
             int usrInput = UserInputManager.getLimitedInt(1, 4);
