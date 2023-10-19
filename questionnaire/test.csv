@@ -1,4 +1,5 @@
-Question?,1,Alternative A,Alternative B,Alternative C,Alternative D
+# if # is first char in a line it will be comented out.
+# file has folowing format: Question?,Coorect answer as int (1-4),Alternative A,Alternative B,Alternative C,Alternative D
 First question which is true?,1,true,false,false,false
 Second question which is true?,2,false,true,false,false
 Third question which is true?,3,false,false,true,false

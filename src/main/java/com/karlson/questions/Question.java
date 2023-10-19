@@ -9,6 +9,7 @@ public class Question {
     private final int answer;
     private final String optionC;
     private final String optionD;
+    private boolean correctAnswer = false;
 
     public Question(QuestionBuilder builder) {
         this.quiz = builder.quiz;
@@ -17,6 +18,18 @@ public class Question {
         this.optionB = builder.optionB;
         this.optionC = builder.optionC;
         this.optionD = builder.optionD;
+    }
+
+    public String getQuiz() {
+        return quiz;
+    }
+
+    public void setCorrectAnswer(boolean correctAnswer) {
+        this.correctAnswer = correctAnswer;
+    }
+
+    public boolean wasCorrectAnswer(){
+        return correctAnswer;
     }
 
     public int getAnswer() {

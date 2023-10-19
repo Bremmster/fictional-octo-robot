@@ -8,21 +8,22 @@ Small application for quizzes. Can handle questions with one correct option and 
 Runs on Java 21
 
 ## Usage
-Add you questions to questionnaire/test.csv
+Add your questions to questionnaire/test.csv
 
-csv is a comma separated file
-Example question:  The sky is?,3,Orange,Green,Blue,Pink 
+Csv is a comma separated file
+Example question: The sky is?,3,Orange,Green,Blue,Pink 
 Correct answer 3 is blue.
+It's possible to comment on rows, use # as first char.
 
-| String      | int (1-4)      | String | String | String            | String            |
-|-------------|----------------|--------|--------|-------------------|-------------------|
-| question    | correct answer | choice | choice | choice (optional) | choice (optional) |
-| The sky is? | 3              | Orange | Green  | Blue              | Pink              |
+| String                     | int (1-4)      | String | String | String            | String            |
+|----------------------------|----------------|--------|--------|-------------------|-------------------|
+| question                   | correct answer | choice | choice | choice (optional) | choice (optional) |
+| The sky is?                | 3              | Orange | Green  | Blue              | Pink              |
+| # this row will be ignored |                |        |        |                   |                   |
 
 
 ## How to Contribute
 Message me on the interwebs and we work something out.
-
 
 ## Licence
 MIT Copyright (c) <2023> Kristian Karlson

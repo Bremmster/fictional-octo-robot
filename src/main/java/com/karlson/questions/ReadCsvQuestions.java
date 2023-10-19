@@ -27,6 +27,7 @@ public class ReadCsvQuestions {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(FILE_TO_READ))) {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
+                if (line.charAt(0) == '#') continue; // gives user ability to comment out rows
                 String[] values = line.split(",");
                 records.add(Arrays.asList(values));
             }
