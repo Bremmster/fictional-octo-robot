@@ -18,7 +18,6 @@ public class App {
         printBadAnswers();
     }
 
-
     private void askQuestions() {
 
         while (questionsTaken < questions.size()) {

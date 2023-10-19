@@ -66,7 +66,7 @@ public class LoadQuestions {
                         .build();
                 return question;
             }
-            default -> System.out.println("Error questions size out of bound");
+            default -> System.out.println("Error!!1 question size out of bound");
         }
         return null;
     }
